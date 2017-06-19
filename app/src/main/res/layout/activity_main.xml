@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/dinner_3"
+    android:layout_height="match_parent"
+    tools:context="com.dcastalia.imageslider.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPageAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:id="@+id/img_expand"
+        android:src="@drawable/ic_previous"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="60dp"
+        android:visibility="gone"
+        android:background="#95000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_height="100dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_image_gallery"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="60dp"
+        android:layout_height="130dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#95000000"
+            android:layout_weight="3">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:text="A Short Description About The Image Should Go Here" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:id="@+id/bottomGalleryRecyclerView"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:id="@+id/img_collapse"
+                android:src="@drawable/ic_previous"
+                android:background="#95000000"
+                android:layout_height="100dp" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
